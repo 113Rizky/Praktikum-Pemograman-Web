@@ -170,3 +170,38 @@ footer {
     margin: auto;
   }
 }
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tombol Back to Top */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: .6rem .9rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50%;
+  background: #00095d;
+  color: #fff;
+  cursor: pointer;
+  display: none; /* sembunyi dulu */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  transition: background .3s;
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  background: #00e5ff;
+}

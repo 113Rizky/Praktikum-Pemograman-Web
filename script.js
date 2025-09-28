@@ -1,13 +1,10 @@
-// ====== script.js ======
-
-// 1. Update tahun otomatis di footer
 const yearSpan = document.getElementById("year");
 yearSpan.textContent = new Date().getFullYear();
 
-// 2. Validasi form pemesanan
+
 const form = document.querySelector("form");
 form.addEventListener("submit", function (e) {
-  e.preventDefault(); // cegah submit default
+  e.preventDefault(); 
 
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
@@ -18,16 +15,16 @@ form.addEventListener("submit", function (e) {
   }
 
   alert("✅ Terima kasih " + name + ", pesanan kamu sudah dikirim!");
-  form.reset(); // reset form setelah submit
+  form.reset(); 
 });
 
-// 3. Interaksi tombol "Pesan sekarang"
+
 const pesanBtn = document.querySelector(".btn.btn-primary");
 pesanBtn.addEventListener("click", () => {
   alert("📞 Silakan isi form pemesanan di bawah 👇");
 });
 
-// 4. Dark Mode (opsional)
+
 const darkModeToggle = document.createElement("button");
 darkModeToggle.textContent = "🌙 Dark Mode";
 darkModeToggle.classList.add("btn");
@@ -39,30 +36,40 @@ darkModeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 });
 
-// 5. Style untuk dark mode (tambahkan via JS)
 const darkStyle = document.createElement("style");
 darkStyle.textContent = `
   .dark-mode {
-    background-color: #121212;
-    color: #eee;
+    background-color: #000;   /* hitam pekat */
+    color: #f5f5f5;           /* teks putih abu */
   }
   .dark-mode header, .dark-mode footer {
-    background: #000;
+    background: #111;         /* hampir hitam */
+    color: #fff;
   }
   .dark-mode .card {
-    background: #1e1e1e;
-    color: #eee;
+    background: #1a1a1a;      /* abu gelap */
+    border: 1px solid #333;   /* biar card keliatan */
+    color: #f5f5f5;
+  }
+  .dark-mode a {
+    color: #42a5f5;           /* biru terang */
+  }
+  .dark-mode .btn-primary {
+    background: #e53935;      /* merah gaming */
+    color: #fff;
   }
 `;
 document.head.appendChild(darkStyle);
 
-// Fungsi untuk cek apakah elemen terlihat di layar
+
+
+
 function revealOnScroll() {
   const reveals = document.querySelectorAll(".reveal");
   for (let i = 0; i < reveals.length; i++) {
     const windowHeight = window.innerHeight;
     const elementTop = reveals[i].getBoundingClientRect().top;
-    const elementVisible = 100; // jarak sebelum muncul
+    const elementVisible = 100; 
 
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");

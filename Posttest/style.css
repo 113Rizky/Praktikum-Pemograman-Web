@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background: #f9fafb; /* abu terang bersih */
+  color: #333;
+}
+
+header {
+  background: #1e3a8a; /* biru navy */
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem; /* jarak logo dengan teks Pixel Play */
+}
+
+.logo-img {
+  width: 80px;   /* kecilkan logo */
+  height: auto;
+}
+
+.logo-text h1 {
+  font-size: 1.4rem; /* judul lebih kecil biar seimbang dengan logo */
+  margin: 0;
+}
+
+.logo-text p {
+  font-size: 0.8rem; /* deskripsi lebih kecil */
+  margin: 0;
+  color: #ccc;
+}
+
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  transition: color .3s;
+}
+
+nav a:hover {
+  color: #93c5fd; /* biru muda saat hover */
+}
+
+
+/* ====== SECTIONS ====== */
+main section {
+  padding: 3rem 1.5rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #1e40af; /* biru tua untuk heading */
+}
+/* ====== CARD STYLE ====== */
+ul {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+
+#pricing .card img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* ====== BUTTONS ====== */
+.btn {
+  display: inline-block;
+  padding: .6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all .3s;
+  margin-top: 2rem;  /* 👈 kasih jarak ke atas */
+}
+
+.btn-primary {
+  background: #3b82f6; /* biru terang */
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #2563eb; /* biru gelap */
+}
+
+/* ====== FORM ====== */
+form {
+  display: grid;
+  gap: 1rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: .6rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+form button {
+  border: none;
+  cursor: pointer;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #0e0c23; /* hitam kebiruan */
+  color: #fff;
+  font-size: .9rem;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (min-width: 768px) {
+  nav ul {
+    gap: 2rem;
+  }
+
+  #jenisps ul, #games ul, #pricing ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  form {
+    max-width: 600px;
+    margin: auto;
+  }
+}
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tombol Back to Top */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: .6rem .9rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50%;
+  background: #00095d;
+  color: #fff;
+  cursor: pointer;
+  display: none; /* sembunyi dulu */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  transition: background .3s;
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  background: #00e5ff;
+}

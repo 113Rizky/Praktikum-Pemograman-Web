@@ -1,0 +1,167 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+  header("Location: login.php");
+  exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard │ Pixel Play</title>
+  <meta name="description" content="Pixel Play — layanan rental PlayStation, console, dan paket gaming sederhana. Referensi: royalrentalps.com" />
+
+  <!-- Pastikan path file benar -->
+  <base href="./">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="gambar for html/logo-pixelplay.png" alt="Pixel Play Logo" class="logo-img">
+    <div class="logo-text">
+      <h1>Pixel Play</h1>
+      <p>Rental PlayStation & Console Gaming</p>
+    </div>
+  </div>
+
+  <nav aria-label="Navigasi utama">
+    <ul>
+      <li><a href="#awal">🏠 Beranda</a></li>
+      <li><a href="#jenisps">🎮 Konsol</a></li>
+      <li><a href="#games">🕹️ Game</a></li>
+      <li><a href="#pricing">💰 Paket & Harga</a></li>
+      <li><a href="#contact">📞 Kontak</a></li>
+      <li><a href="logout.php" style="color: #ff3333;">Logout (<?php echo htmlspecialchars($_SESSION['username']); ?>)</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="awal" aria-labelledby="awal-title">
+    <h2 id="awal-title">Main Tanpa Antri, Kontak Pixel Play PlayStation dengan Mudah</h2>
+    <p>Pixel Play menyediakan rental PlayStation, console, dan paket gaming untuk teman, keluarga, atau acara khusus Anda.</p>
+    <p><a href="#contact" class="btn btn-primary">Pesan atau hubungin sekarang</a></p>
+  </section>
+
+  <section id="jenisps" aria-labelledby="jenisps-title">
+    <h2 id="jenisps-title" class="reveal">Daftar Konsol PlayStation</h2>
+    <ul>
+      <li class="card reveal">
+        <img src="gambar for html/ps4.jpg" alt="PS4 Slim">
+        <h4>PS4 Slim Paket Hemat</h4>
+        <p>500GB HDD, ukuran ramping, cocok untuk yang ingin bermain game banyak.</p>
+      </li>
+      <li class="card reveal">
+        <img src="gambar for html/ps4pro.jpg" alt="PS4 Pro">
+        <h4>PlayStation 4 Pro</h4>
+        <p>1TB HDD, dukungan 4K, performa grafis lebih tinggi. Termasuk 2 stik.</p>
+      </li>
+      <li class="card card-featured reveal">
+        <img src="gambar for html/ps5.jpg" alt="PS5">
+        <h4>PlayStation 5</h4>
+        <p>SSD super cepat, dukungan 4K HDR, Ray Tracing, 2 stik DualSense bawaan.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="games" aria-labelledby="games-title">
+    <h2 id="games-title" class="reveal">Daftar Game Populer</h2>
+    <ul>
+      <li class="card reveal">
+        <img src="gambar for html/fc25.jpg" alt="FIFA 25">
+        <h4>FIFA 25</h4>
+        <p>Game sepak bola terbaru dengan mode karir dan online match.</p>
+      </li>
+      <li class="card reveal">
+        <img src="gambar for html/efootball.jpg" alt="eFootball 2025">
+        <h4>eFootball 2025</h4>
+        <p>Alternatif gratis untuk pecinta bola, gameplay realistis.</p>
+      </li>
+      <li class="card reveal">
+        <img src="gambar for html/images.jpg" alt="Mortal Kombat 11">
+        <h4>Mortal Kombat 11</h4>
+        <p>Game fighting brutal dengan karakter ikonik.</p>
+      </li>
+      <li class="card card-featured reveal">
+        <img src="gambar for html/takken 8.jpg" alt="Tekken 8">
+        <h4>Tekken 8</h4>
+        <p>Seri terbaru Tekken, grafis next-gen, karakter legendaris.</p>
+      </li>
+      <li class="card reveal">
+        <img src="gambar for html/Grand_Theft_Auto_VI.png" alt="GTA VI">
+        <h4>GTA VI</h4>
+        <p>Game open world populer, cerita epik.</p>
+      </li>
+      <li class="card reveal">
+        <img src="gambar for html/God_of_War_Ragnarök_cover.jpg" alt="God of War Ragnarok">
+        <h4>God of War: Ragnarok</h4>
+        <p>Petualangan Kratos melawan dewa Nordik.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="pricing">
+    <h2 class="reveal">Paket & Harga</h2>
+    <ul>
+      <li class="card reveal">Paket Harian PS4 Rp8.000/jam</li>
+      <li class="card reveal">Paket Weekend PS5 Rp15.000/jam</li>
+      <li class="card reveal">Paket Event Konsol + Layar (harga nego)</li>
+    </ul>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Kontak & Pemesanan</h2>
+    <address>
+      <p>Alamat: Jalan Cendana No. 07, Kota Los Santos</p>
+      <p>Telepon: 080101010101</p>
+      <p>Email: <a href="mailto:playpix@work.com">playpix@work.com</a></p>
+    </address>
+
+    <form action="#" method="post" aria-label="Form pemesanan sederhana">
+      <div>
+        <label for="name">Nama</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div>
+        <label for="service">Layanan yang diinginkan</label>
+        <select id="service" name="service">
+          <option value="ps4slim">Rental PS4 Slim</option>
+          <option value="ps4pro">Rental PS4 Pro</option>
+          <option value="ps5">Rental PS5</option>
+        </select>
+      </div>
+      <div>
+        <label for="date">Tanggal</label>
+        <input type="date" id="date" name="date" />
+      </div>
+      <div>
+        <label for="message">Pesan / Detail</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary">Kirim Pesanan</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <section>
+    <p>&copy; <span id="year">2025</span> Pixel Play. All rights reserved.</p>
+    <p>Referensi desain: <a href="https://royalrentalps.com/" target="_blank" rel="noopener">royalrentalps.com</a></p>
+  </section>
+</footer>
+
+<button id="backToTop">⬆</button>
+</body>
+</html>

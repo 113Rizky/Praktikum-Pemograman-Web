@@ -153,6 +153,19 @@ if (!isset($_SESSION['username'])) {
       </div>
     </form>
   </section>
+
+  <!-- === BAGIAN BARU: CRUD Penyewa === -->
+  <section id="crud" aria-labelledby="crud-title">
+    <h2 id="crud-title" class="reveal">Manajemen Rental PlayStation</h2>
+    <p>Kelola data penyewa yang sedang aktif atau ingin melakukan perubahan jadwal rental.</p>
+
+    <div class="crud-buttons">
+      <a href="create.php" class="btn btn-primary">🟢 Tambah Penyewa Baru</a>
+      <a href="read.php" class="btn btn-secondary">📋 Lihat Data Penyewa</a>
+    </div>
+  </section>
+  <!-- === AKHIR BAGIAN BARU === -->
+
 </main>
 
 <footer>

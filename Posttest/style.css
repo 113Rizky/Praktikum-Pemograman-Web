@@ -205,3 +205,173 @@ footer {
 #backToTop:hover {
   background: #00e5ff;
 }
+
+/* --- Section CRUD --- */
+#crud {
+  text-align: center;
+  margin: 60px auto;
+  padding: 40px 20px;
+  background-color: #f8f9fc;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+}
+
+#crud h2 {
+  color: #19328a;
+  margin-bottom: 15px;
+}
+
+#crud p {
+  color: #444;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.crud-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-secondary {
+  background-color: #555;
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #333;
+}
+
+/* 🎮 Dashboard Manajemen Rental */
+.hero-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+  border-radius: 0 0 25px 25px;
+  margin-bottom: 40px;
+}
+
+.hero-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  color: #dbeafe;
+}
+
+/* 🎮 Bagian Manajemen Rental */
+.rental-management {
+  text-align: center;
+  background-color: #f9faff;
+  padding: 60px 30px;
+  border-radius: 16px;
+  margin: 50px auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+}
+
+.rental-management h2 {
+  color: #1e3a8a;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.rental-management p {
+  color: #444;
+  margin-bottom: 40px;
+  font-size: 1.05rem;
+}
+
+/* Card style */
+.rental-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card-option {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  width: 280px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.card-option:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.icon-option {
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+.card-option h3 {
+  color: #1e3a8a;
+  margin-bottom: 8px;
+}
+
+.card-option p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+/* Tombol */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-secondary {
+  background-color: #374151;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #111827;
+}
+
+/* Tombol back to top */
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+#backToTop:hover {
+  background-color: #2563eb;
+}
